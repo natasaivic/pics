@@ -20,3 +20,4 @@ urlpatterns = [
     path("pics/", include("pics.urls")),
     path("admin/", admin.site.urls),
 ]
+ 
