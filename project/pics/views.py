@@ -16,6 +16,9 @@ def login(request):
     return render(request, 'pics/login.html')
 
 
+def logout(request):
+    return render(request, 'pics/logout.html')
+
 # This method renders the profile page displays a grid of images as a visual representation of the user's posts.
 def profile(request):
     return render(request, 'pics/profile.html')
