@@ -1,5 +1,17 @@
 {% extends 'pics/base.html' %}
-
+{% load static %}
 {% block content %}
-<h1>Profile</h1>
-{% endblock %}
+<div class="profile-section">
+    <div class="profile-picture">
+      <!-- Display the profile picture here -->
+    </div>
+    <div class="profile-details">
+      <h2>{{ user.name }}</h2>
+      <p>{{ user.bio }}</p>
+    </div>
+  </div>
+  
+  <div class="post-section">
+    <!-- Display the posts here -->
+  </div>
+  {% endblock %}

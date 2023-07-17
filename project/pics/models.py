@@ -5,9 +5,11 @@ from django.db import models
 # Fields: id (primary key), username, email, password, profile_picture, bio.
 
 class User(models.Model):
+    name = models.CharField(max_length=50, default='')
     username = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
-    password = models.CharField(max_length=100)
+    password1 = models.CharField(max_length=100, null=True)
+    password2 = models.CharField(max_length=100, null=True)
     # profile_picture = models.ImageField(upload_to='profile_pictures')
     bio = models.TextField()
 

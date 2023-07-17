@@ -6,3 +6,9 @@
 .sign-in-link {
     color: white;
 }
+
+.stretch-span {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
