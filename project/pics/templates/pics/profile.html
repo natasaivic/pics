@@ -1,17 +1,28 @@
 {% extends 'pics/base.html' %}
 {% load static %}
+<br>
 {% block content %}
-<div class="profile-section">
-    <div class="profile-picture">
-      <!-- Display the profile picture here -->
-    </div>
-    <div class="profile-details">
-      <h2>{{ user.name }}</h2>
-      <p>{{ user.bio }}</p>
-    </div>
+<div class="container">
+  <div class="row">
+      <div class="col"></div>
+
+      <div class="col">
+        {% for post in user.posts.all %}
+          <div class="post">
+            <img src="{{ post.image.url }}" alt="Post Image">
+            <p>{{ post.caption }}</p>
+          </div>
+        {% empty %}
+          <p>No posts yet.</p>
+        {% endfor %}
+      </div>
+
+      <div class="col">
+          <a href="/edit_profile_pic" title="Click to change profile picture"><img src="/static/profile_pics/1.jpg" class="rounded-circle profile-pic"></a>
+          <br>
+          <h2>{{ user.username }}</h2>
+          <p>{{ user.bio }}</p>
+      </div>
   </div>
-  
-  <div class="post-section">
-    <!-- Display the posts here -->
-  </div>
-  {% endblock %}
+</div>
+{% endblock %}

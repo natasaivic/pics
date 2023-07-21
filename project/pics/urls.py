@@ -5,10 +5,11 @@ from .forms import CustomAuthForm
 
 
 urlpatterns = [
-    path("", views.login),
+    path("", views.login_page),
     path("registration/", views.registration, name="registration"),
-    path("login/", views.login, name="login"),
+    path("login_page/", views.login_page, name="login_page"),
     path("profile/", views.profile, name="profil"),
+    path("edit_profile_pic/", views.edit_profile_pic, name="edit_profile_pic"),
     path("feed/", views.feed, name="feed"),
-    path("logout/", views.logout, name="logout"),
+    path("logout_user/", views.logout_user, name="logout_user"),
 ]
